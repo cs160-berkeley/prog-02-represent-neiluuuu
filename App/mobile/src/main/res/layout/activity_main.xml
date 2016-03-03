@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.cs160.neiluuu.electiontracker.MainActivity"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/zipCode"
+        android:hint="Enter a zip code"
+        android:layout_gravity="bottom"
+        android:layout_column="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/go" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:id="@+id/go"
+        android:layout_alignBottom="@+id/zipCode"
+        android:layout_alignParentEnd="true"
+        android:textColor="#fff"
+        android:backgroundTint="#a9a9a9" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CURRENT LOCATION"
+        android:id="@+id/curLoc"
+        android:layout_below="@+id/zipCode"
+        android:layout_alignParentStart="true"
+        android:textColor="#fff"
+        android:backgroundTint="#A9A9a9" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollReps"
+        android:layout_below="@+id/curLoc"
+        android:layout_alignStart="@+id/curLoc" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/reps">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rep1"
+                android:layout_marginTop="10dp"
+                android:onClick="sendRep">
+                <ImageView
+                    android:id="@+id/repImg1"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bboxer" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/repName1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Barbara Boxer"
+                        android:textStyle="bold"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/repPartyTag1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Democrat Senator" />
+
+                    <TextView
+                        android:id="@+id/repEmail1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="barbaraboxer@gmail.com" />
+
+                    <TextView
+                        android:id="@+id/repWebsite1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="www.barbaraboxer.com" />
+
+                    <TextView
+                        android:id="@+id/repTweet1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:maxLines="100"
+                        android:text="Latest Tweet: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat."
+                        android:autoText="false"
+                        android:singleLine="false"
+                        android:layout_weight="1"
+                        android:textColor="#4099ff" />
+
+                </LinearLayout>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rep2"
+                android:layout_marginTop="10dp"
+                android:onClick="sendRep">
+                <ImageView
+                    android:id="@+id/repImg2"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bboxer" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/repName2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Barbara Boxer"
+                        android:textStyle="bold"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/repPartyTag2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Democrat Senator" />
+
+                    <TextView
+                        android:id="@+id/repEmail2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="barbaraboxer@gmail.com" />
+
+                    <TextView
+                        android:id="@+id/repWebsite2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="www.barbaraboxer.com" />
+
+                    <TextView
+                        android:id="@+id/repTweet2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:maxLines="100"
+                        android:text="Latest Tweet: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat."
+                        android:autoText="false"
+                        android:singleLine="false"
+                        android:layout_weight="1"
+                        android:textColor="#4099ff" />
+
+                </LinearLayout>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rep3"
+                android:layout_marginTop="10dp"
+                android:onClick="sendRep">
+                <ImageView
+                    android:id="@+id/repImg3"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bboxer" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/repName3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Barbara Boxer"
+                        android:textStyle="bold"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/repPartyTag3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Democrat Senator" />
+
+                    <TextView
+                        android:id="@+id/repEmail3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="barbaraboxer@gmail.com" />
+
+                    <TextView
+                        android:id="@+id/repWebsite3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="www.barbaraboxer.com" />
+
+                    <TextView
+                        android:id="@+id/repTweet3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:maxLines="100"
+                        android:text="Latest Tweet: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat."
+                        android:autoText="false"
+                        android:singleLine="false"
+                        android:layout_weight="1"
+                        android:textColor="#4099ff" />
+
+                </LinearLayout>
+
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>
