@@ -5,7 +5,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.cs160.neiluuu.electiontracker.MainActivity"
     android:descendantFocusability="beforeDescendants"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    android:background="#ffffff">
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -67,6 +69,7 @@
                     android:src="@drawable/bboxer" />
 
                 <LinearLayout
+                    android:id="@+id/repDetails1"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,29 +96,25 @@
                         android:id="@+id/repEmail1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="barbaraboxer@gmail.com" />
+                        android:text="barbaraboxer@gmail.com"
+                        android:autoLink="email"/>
 
                     <TextView
                         android:id="@+id/repWebsite1"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="www.barbaraboxer.com" />
-
-                    <TextView
-                        android:id="@+id/repTweet1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="none"
-                        android:maxLines="100"
-                        android:text="Latest Tweet: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat."
-                        android:autoText="false"
-                        android:singleLine="false"
-                        android:layout_weight="1"
-                        android:textColor="#4099ff" />
+                        android:text="www.barbaraboxer.com"
+                        android:autoLink="web"/>
 
                 </LinearLayout>
 
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tweetHolder1"></TableRow>
+
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -130,6 +129,7 @@
                     android:src="@drawable/bboxer" />
 
                 <LinearLayout
+                    android:id="@+id/repDetails2"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -156,29 +156,25 @@
                         android:id="@+id/repEmail2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="barbaraboxer@gmail.com" />
+                        android:text="barbaraboxer@gmail.com"
+                        android:autoLink="email"/>
 
                     <TextView
                         android:id="@+id/repWebsite2"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="www.barbaraboxer.com" />
-
-                    <TextView
-                        android:id="@+id/repTweet2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="none"
-                        android:maxLines="100"
-                        android:text="Latest Tweet: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat."
-                        android:autoText="false"
-                        android:singleLine="false"
-                        android:layout_weight="1"
-                        android:textColor="#4099ff" />
+                        android:text="www.barbaraboxer.com"
+                        android:autoLink="web"/>
 
                 </LinearLayout>
 
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tweetHolder2"></TableRow>
+
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -193,6 +189,7 @@
                     android:src="@drawable/bboxer" />
 
                 <LinearLayout
+                    android:id="@+id/repDetails3"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -219,29 +216,84 @@
                         android:id="@+id/repEmail3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="barbaraboxer@gmail.com" />
+                        android:text="barbaraboxer@gmail.com"
+                        android:autoLink="email"/>
 
                     <TextView
                         android:id="@+id/repWebsite3"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:text="www.barbaraboxer.com" />
-
-                    <TextView
-                        android:id="@+id/repTweet3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="none"
-                        android:maxLines="100"
-                        android:text="Latest Tweet: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat."
-                        android:autoText="false"
-                        android:singleLine="false"
-                        android:layout_weight="1"
-                        android:textColor="#4099ff" />
+                        android:text="www.barbaraboxer.com"
+                        android:autoLink="web"/>
 
                 </LinearLayout>
 
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tweetHolder3"></TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rep4"
+                android:layout_marginTop="10dp"
+                android:onClick="sendRep">
+                <ImageView
+                    android:id="@+id/repImg4"
+                    android:layout_width="75dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bboxer" />
+
+                <LinearLayout
+                    android:id="@+id/repDetails4"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/repName4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Barbara Boxer"
+                        android:textStyle="bold"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/repPartyTag4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Democrat Senator" />
+
+                    <TextView
+                        android:id="@+id/repEmail4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="barbaraboxer@gmail.com"
+                        android:autoLink="email"/>
+
+                    <TextView
+                        android:id="@+id/repWebsite4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="www.barbaraboxer.com"
+                        android:autoLink="web"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tweetHolder4"></TableRow>
 
 
         </TableLayout>

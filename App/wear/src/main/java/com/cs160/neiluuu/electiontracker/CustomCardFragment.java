@@ -18,10 +18,10 @@ public class CustomCardFragment extends CardFragment {
     }
 
     public static CustomCardFragment create(CharSequence title, CharSequence description) {
-        return create(title, description, 0, -1);
+        return create(title, description, "", "", 0, -1);
     }
 
-    public static CustomCardFragment create(CharSequence title, CharSequence text, int iconRes, int pageNumber) {
+    public static CustomCardFragment create(CharSequence title, CharSequence text, String zip, String party, int iconRes, int pageNumber) {
         CustomCardFragment fragment = new CustomCardFragment();
         Bundle args = new Bundle();
         if(title != null) {
@@ -30,6 +30,14 @@ public class CustomCardFragment extends CardFragment {
 
         if(text != null) {
             args.putCharSequence("CardFragment_text", text);
+        }
+
+        if(zip != null) {
+            args.putCharSequence("CardFragment_zip", zip);
+        }
+
+        if(party != null) {
+            args.putCharSequence("CardFragment_party", party);
         }
 
         if(iconRes != 0) {
@@ -71,6 +79,7 @@ public class CustomCardFragment extends CardFragment {
                     Intent sendIntent = new Intent(getActivity().getBaseContext(), WatchToPhoneService.class);
                     System.out.println(args.getInt("CardFragment_page"));
                     sendIntent.putExtra("CARD", Integer.toString(args.getInt("CardFragment_page")));
+                    sendIntent.putExtra("ZIP", args.getString("CardFragment_zip"));
                     getActivity().startService(sendIntent);
                 }
             });

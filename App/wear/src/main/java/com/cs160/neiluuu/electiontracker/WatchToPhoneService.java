@@ -56,7 +56,7 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
         final int card;
         if (extras.getString("CARD") != null) {
             card = 1;
-            message = extras.getString("CARD");
+            message = extras.getString("CARD") + " " + extras.getString("ZIP");
         }
         else if (extras.getString("ZIPCODE") != null) {
             card = 0;

@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.wearable.view.CardFragment;
 import android.support.wearable.view.FragmentGridPagerAdapter;
@@ -20,6 +21,11 @@ public class GridPagerAdapter extends FragmentGridPagerAdapter {
     private final Context mContext;
     private List mRows;
     private CustomCardFragment[][] PAGES;
+
+    public final static String REPUBLICAN = "Republican";
+    public final static String DEMOCRAT = "Democrat";
+    public final static String REPCOLOR = "#E91D0E";
+    public final static String DEMCOLOR = "#2F80ED";
 
     public GridPagerAdapter(Context ctx, FragmentManager fm, CustomCardFragment[][] pages) {
         super(fm);
@@ -58,7 +64,18 @@ public class GridPagerAdapter extends FragmentGridPagerAdapter {
 
     @Override
     public Drawable getBackgroundForPage(int row, int column) {
-        return GridPagerAdapter.BACKGROUND_NONE;
+        String party = PAGES[row][column].getArguments().getString("CardFragment_party");
+        return new ColorDrawable(getPartyColor(party));
+    }
+
+    public int getPartyColor(String party) {
+        if (party == DEMOCRAT) {
+            return Color.parseColor(DEMCOLOR);
+        } else if (party == REPUBLICAN) {
+            return Color.parseColor(REPCOLOR);
+        } else {
+            return Color.BLACK;
+        }
     }
 
     @Override
