@@ -1,4 +1,4 @@
-# PROG 02: ElectTracker!
+# PROG 02: ElecTracker!
 
 My app is called ElecTracker.  It allows you to search the representatives and senators in a given zip code.  You can get your current location by tapping current location on the mobile view.  The app grabs the correct senators and representatives.  All of the API data is filled in correctly on both the phone and the watch.  There is a link provided for both the email and website of each representative.  It correctly displays the voting information of the county in the 2012 election.  You can randomly select a zip code to search on by shaking that watch.
 
@@ -9,6 +9,7 @@ Neil Argade ([neilargade@berkeley.edu](mailto:neilargade@berkeley.edu))
 ## Demo Video
 
 See [Barebones Overview -- 2B] (https://youtu.be/2ZmO9RLkOTU)
+<br>
 See [Final Project -- 2C] (https://youtu.be/qIZmzibUVNg)
 
 ## Screenshots
@@ -16,8 +17,8 @@ See [Final Project -- 2C] (https://youtu.be/qIZmzibUVNg)
 <img src="screenshots/intro.png" height="400" alt="Screenshot"/>
 <img src="screenshots/list.png" height="400" alt="Screenshot"/>
 <img src="screenshots/detailed.png" height="400" alt="Screenshot"/>
-<img src="screenshots/watch1.png" height="400" alt="Screenshot"/>
-<img src="screenshots/watch2.png" height="400" alt="Screenshot"/>
+<img src="screenshots/watch1.png" height="250" alt="Screenshot"/>
+<img src="screenshots/watch2.png" height="250" alt="Screenshot"/>
 
 ## Acknowledgments
 
